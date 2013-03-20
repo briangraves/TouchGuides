@@ -1,4 +1,11 @@
 
+.row {
+	height: 400px;
+}
+.row.one { background: blue; }
+.row.two { background: red; }
+.row.three { background: pink; }
+.row.four { background: green; }
 body {
 
 }
@@ -10,7 +17,7 @@ body {
 .guide {
 	z-index: 999;
 	position: fixed;
-	opacity: 0.6;
+	opacity: 0.5;
 	top: 0;
 	left:0;
 	right: 0;
@@ -60,7 +67,7 @@ body {
 		@media only screen and (min-width: 25em) { border-radius: 2200px 1800px 2200px 1600px; }
 		span {
 			top: 50%;
-			left: 50%;
+			right: 140px;
 		}
 	}
 }
