@@ -1,1 +1,1 @@
-;
+$(document).ready(function(){$("#slider").slider({min:0,max:1,step:.1,value:.7}).bind("slidechange",function(){var e=$(this).slider("value"),t="#"+$(this).attr("data-wjs-element");$(t).css("opacity",e)}),$("#phone").click(function(){$("#guide").removeClass().addClass("phone")}),$("#tablet").click(function(){$("#guide").removeClass().addClass("tablet")}),$("#laptop").click(function(){$("#guide").removeClass().addClass("laptop")})});
