@@ -66,4 +66,34 @@ body {
 			right: 140px;
 		}
 	}
+	@media only screen and (orientation: landscape) {
+		.hard { display: none; }
+		.ok {
+			z-index: 4;
+			top: 0;
+			bottom: auto;
+			width: 100%;
+			max-width: none;
+			height: 40%;
+			max-height: none;
+			border-radius: 0 0 100% 100%;
+			span {
+				right: 50%;
+			}
+		}
+		.easy {
+			z-index: 3;
+			width: 100%;
+			max-width: none;
+			height: 100%;
+			max-height: none;
+			right: 0;
+			border-radius: 0;
+			span {
+				right: 50%;
+				top: auto;
+				bottom: 100px;
+			}
+		}
+	}
 }
