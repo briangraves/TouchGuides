@@ -13,11 +13,11 @@
     <body class="<%= page_classes %>">
         <header class="header">
             <nav>
-                <button id="refresh">refresh</button>
-                <button id="off">off</button>
                 <button id="phone">phone</button>
                 <button id="tablet">tablet</button>
                 <button id="laptop">laptop</button>
+                <button id="refresh">back</button>
+                <button id="off">off</button>
             </nav>
             <div id="slider" data-wjs-element="guide"></div>
         </header>
@@ -28,18 +28,21 @@
         </div>
 
         <div class="main">
+            <h1>Touch<span>Guides</span></h1>
             <div class="url">
                 <input type="text" id="url" placeholder="http://www.yoururl.com">
-                <button class="button">go</button>
+                <button class="button">Go</button>
             </div>
-            <h1>TouchGuides</h1>
-            <ol>
-                <li>Enter Your URL</li>
-                <li>Click Go</li>
-                <li>Choose Your Overlay</li>
-                <li>???</li>
-                <li>Profit</li>
-            </ol>
+            <div class="howitworks">
+                <h2>How it works:</h2>
+                <ol>
+                    <li>Enter Your URL</li>
+                    <li>Click Go</li>
+                    <li>Choose Your Overlay</li>
+                    <li>???</li>
+                    <li>Profit</li>
+                </ol>
+            </div>
         </div>
         <%= yield %>
 
