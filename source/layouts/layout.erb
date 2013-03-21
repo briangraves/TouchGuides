@@ -13,6 +13,8 @@
     <body class="<%= page_classes %>">
         <header class="header">
             <nav>
+                <button id="refresh">refresh</button>
+                <button id="off">off</button>
                 <button id="phone">phone</button>
                 <button id="tablet">tablet</button>
                 <button id="laptop">laptop</button>
@@ -23,6 +25,21 @@
             <div class="hard"><span>Hard</span></div>
             <div class="ok"><span>OK</span></div>
             <div class="easy"><span>Easy</span></div>
+        </div>
+
+        <div class="main">
+            <div class="url">
+                <input type="text" id="url" placeholder="http://www.yoururl.com">
+                <button class="button">go</button>
+            </div>
+            <h1>TouchGuides</h1>
+            <ol>
+                <li>Enter Your URL</li>
+                <li>Click Go</li>
+                <li>Choose Your Overlay</li>
+                <li>???</li>
+                <li>Profit</li>
+            </ol>
         </div>
         <%= yield %>
 

@@ -9,15 +9,30 @@ body {
 .header {
 	z-index: 9999;
 	position: fixed;
+	top: -2.5em;
 	width: 100%;
 	padding: 0.5em;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 	@include clearfix;
+	background: rgba(100, 149, 236, 0.7);
+	border-bottom: 1em solid rgba(100, 149, 236, 1);
+	&:hover {
+		top: 0;
+	}
+	&:after {
+		content: '';
+	}
 	nav {
 		float: right;
 	}
 	#slider { width: 100px; margin-top: 4px; }
 }
+.main {
+	width: 100%;
+	text-align: center;
+	margin-top: 3.5em;
+}
+iframe { width: 100%; height: 2500px; }
 
 /** Guides **/
 .hard, .ok, .easy { position: absolute; }
@@ -25,9 +40,10 @@ body {
 .ok { background-color: rgba(167,212,50,1); }
 .easy { background-color: rgba(56,168,0,1); }
 #guide {
+	display: none;
 	z-index: 999;
 	position: fixed;
-	opacity: 0;
+	opacity: 0.7;
 	top: 0;
 	left:0;
 	right: 0;
@@ -40,7 +56,6 @@ body {
 		color: #707070;
 	}
 }
-#guide.phone, #guide.tablet, #guide.laptop { opacity: 0.7; }
 #guide.phone {
 	.hard {
 		z-index: 2;
