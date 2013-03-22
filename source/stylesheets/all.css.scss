@@ -19,18 +19,29 @@ button {
 .header {
 	z-index: 9999;
 	position: fixed;
-	top: -3.38em;
+	top: -3.1em;
 	width: 100%;
 	padding: 0.5em;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 	@include clearfix;
 	background: rgba(100, 149, 236, 0.7);
 	border-bottom: 1em solid rgba(100, 149, 236, 1);
+	-webkit-transition: top 0.3s ease-out;
+	   -moz-transition: top 0.3s ease-out;
+	    -ms-transition: top 0.3s ease-out;
+	     -o-transition: top 0.3s ease-out;
+		    transition: top 0.3s ease-out;
 	&:hover {
 		top: 0;
 	}
 	&:after {
 		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid #f00;
 	}
 	nav {
 		float: right;
@@ -67,10 +78,22 @@ button {
 	}
 	.howitworks {
 		max-width: 20em;
-		margin: 0 auto;
+		margin: 0 auto 6em;
 		ol {
 			margin-left: 1.5em;
 			text-align: left;
+		}
+	}
+	.inspiration {
+		max-width: 35em;
+		padding: 0 1em;
+		margin: 0 auto;
+		p {
+			font-size: 0.8em;
+			color: rgba(150, 150, 150, 1);
+		}
+		a, a:visited {
+			color: rgba(100, 100, 100, 1);
 		}
 	}
 }
