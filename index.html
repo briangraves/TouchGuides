@@ -8,17 +8,17 @@
 
         <link href="stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="stylesheets/font-awesome.css" media="screen" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.3/themes/base/jquery-ui.css" type="text/css"/>
     </head>
 
     <body class="index">
         <header class="header">
             <nav>
-                <button id="phone">phone</button>
-                <button id="tablet">tablet</button>
-                <button id="laptop">laptop</button>
-                <button id="refresh">back</button>
-                <button id="off">off</button>
+                <button class="overlaySelector" id="phone"><i class="icon-phone"></i></button>
+                <button class="overlaySelector" id="tablet"><i class="icon-tablet"></i></button>
+                <button class="overlaySelector" id="laptop"><i class="icon-laptop"></i></button>
+                <button id="refresh"><i class="icon-refresh"></i></button>
             </nav>
             <div id="slider" data-wjs-element="guide"></div>
         </header>
@@ -31,17 +31,17 @@
         <div class="main">
             <h1>Touch<span>Guides</span></h1>
             <div class="url">
-                <input type="text" id="url" placeholder="http://www.yoururl.com">
-                <button class="button">Go</button>
+                <form id="rwdform" name="rwdform">
+                    <input type="url" id="url" name="url" value="" placeholder="http://www.yoururl.com">
+                    <button id="go">Go</button>
+                </form>
             </div>
             <div class="howitworks">
                 <h2>How it works:</h2>
                 <ol>
                     <li>Enter Your URL</li>
-                    <li>Click Go</li>
+                    <li>Click Go or Press Enter</li>
                     <li>Choose Your Overlay</li>
-                    <li>???</li>
-                    <li>Profit</li>
                 </ol>
             </div>
         </div>

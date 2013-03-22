@@ -4,9 +4,11 @@ $(document).ready(function() {
             var o = $(this).slider('value');
             var e = '#' + $(this).attr('data-wjs-element');
             $(e).css('opacity', o)
-        });
-    $('#off').click(function() {
-        $('#guide').hide().removeClass();
+    });
+
+
+    $('.overlaySelector').click(function() {
+        $(this).toggleClass('selected').siblings().removeClass('selected');
     });
     $('#phone').click(function() {
     	$('#guide').show().removeClass().addClass('phone');
@@ -17,15 +19,38 @@ $(document).ready(function() {
     $('#laptop').click(function() {
     	$('#guide').show().removeClass().addClass('laptop');
     });
-
-    $(".button").click(function(event){
-        $('iframe').attr('src', $( '#url' ).val());
-        $('.main').hide();
-    });
     $("#refresh").click(function(event){
         $('iframe').attr('src', '');
         $( '#url' ).val('');
         $('.main').show();
         $('#guide').hide().removeClass();
+        $(this).siblings().removeClass('selected');
+    });
+
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+    var first = getUrlVars()["url"];
+    var first = decodeURIComponent(first);
+    var first = first.replace(/\#$/, '');
+
+    if(first === "undefined") {
+      // don't do anything.
+    }
+    else {
+    //  take the url variable and update the iframes and input field
+      $("iframe").attr('src',(first));
+      $('#url').attr('value',(first));
+      $('.main').hide();
+    }
+
+    $("#go").click(function(event){
+        $('iframe').attr('src', $( '#url' ).val());
+        $('.main').hide();
     });
 });
