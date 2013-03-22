@@ -34,7 +34,7 @@ button {
 	&:hover {
 		top: 0;
 	}
-	&:after {
+	/*&:after {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -42,7 +42,7 @@ button {
 		border-left: 20px solid transparent;
 		border-right: 20px solid transparent;
 		border-top: 20px solid #f00;
-	}
+	}*/
 	nav {
 		float: right;
 		button { width: 2.5em; padding: 0.5em 0; }
