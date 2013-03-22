@@ -22,7 +22,8 @@ $(document).ready(function() {
     $("#refresh").click(function(event){
         $('iframe').attr('src', '');
         $( '#url' ).val('');
-        $('.main').show();
+        $('.header').hide();
+        $('.main').fadeIn();
         $('#guide').hide().removeClass();
         $(this).siblings().removeClass('selected');
     });
@@ -47,10 +48,12 @@ $(document).ready(function() {
       $("iframe").attr('src',(first));
       $('#url').attr('value',(first));
       $('.main').hide();
+      $('.header').show();
     }
 
     $("#go").click(function(event){
         $('iframe').attr('src', $( '#url' ).val());
         $('.main').hide();
+        $('.header').show();
     });
 });

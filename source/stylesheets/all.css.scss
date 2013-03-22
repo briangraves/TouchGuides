@@ -8,6 +8,7 @@ html, body { height: 100%; }
 body {
 	font-size: 1em;
 	font-family: 'Open Sans', sans-serif;
+	color: rgba(50, 50, 50, 1);
 }
 button {
 	background: rgba(100, 149, 236, 1);
@@ -17,32 +18,17 @@ button {
 	&:hover { background: rgba(62, 124, 235, 1); }
 }
 .header {
+	display: none;
 	z-index: 9999;
 	position: fixed;
-	top: -3.1em;
+	top: 0;
 	width: 100%;
 	padding: 0.5em;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 	@include clearfix;
-	background: rgba(100, 149, 236, 0.7);
-	border-bottom: 1em solid rgba(100, 149, 236, 1);
-	-webkit-transition: top 0.3s ease-out;
-	   -moz-transition: top 0.3s ease-out;
-	    -ms-transition: top 0.3s ease-out;
-	     -o-transition: top 0.3s ease-out;
-		    transition: top 0.3s ease-out;
 	&:hover {
 		top: 0;
 	}
-	/*&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 50%;
-		border-left: 20px solid transparent;
-		border-right: 20px solid transparent;
-		border-top: 20px solid #f00;
-	}*/
 	nav {
 		float: right;
 		button { width: 2.5em; padding: 0.5em 0; }
@@ -53,10 +39,12 @@ button {
 		font-family:'FontAwesome';
 	}
 }
+
 .main {
 	width: 100%;
+	padding-top: 3em;
 	text-align: center;
-	margin-top: 5em;
+	border-top: 1em solid rgba(100, 149, 236, 1);
 	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Josefin Slab', serif; font-weight: 700;
 		span {
