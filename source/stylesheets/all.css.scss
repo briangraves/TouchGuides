@@ -23,7 +23,7 @@ button {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	padding: 0.5em;
+	padding: 0.5em 0.5em 2em 0.5em;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 	@include clearfix;
 	&:hover {
@@ -33,7 +33,30 @@ button {
 		float: right;
 		button { width: 2.5em; padding: 0.5em 0; }
 	}
-	.overlaySelector.selected { background: rgba(62, 124, 235, 1); }
+	.overlaySelector.selected {
+		background: rgba(62, 124, 235, 1);
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 10px;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid rgba(62, 124, 235, 1);
+		}
+		&:after {
+			position: absolute;
+			bottom: -36px;
+			left: -4px;
+			padding: 0.25em;
+			font-size: 0.9em;
+		}
+	}
+	#phone.selected:after { content: 'Phone'; }
+	#tablet.selected:after { content: 'Tablet'; }
+	#laptop.selected:after { content: 'Laptop'; left: -6px; }
+
 	#slider { width: 100px; margin-top: 9px; }
 	button {
 		font-family:'FontAwesome';
