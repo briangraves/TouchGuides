@@ -1,14 +1,13 @@
 $(document).ready(function() {
+
     $('#slider').slider({ min: 0, max: 1, step: 0.1, value: 0.7 })
         .bind("slidechange", function() {
             var o = $(this).slider('value');
             var e = '#' + $(this).attr('data-wjs-element');
             $(e).css('opacity', o)
     });
-
-
     $('.overlaySelector').click(function() {
-        $(this).toggleClass('selected').siblings().removeClass('selected');
+        $(this).addClass('selected').siblings().removeClass('selected');
     });
     $('#phone').click(function() {
     	$('#guide').show().removeClass().addClass('phone');
@@ -57,3 +56,4 @@ $(document).ready(function() {
         $('.header').show();
     });
 });
+
