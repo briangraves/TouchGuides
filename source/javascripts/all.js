@@ -27,7 +27,6 @@ $(document).ready(function() {
         $(this).siblings().removeClass('selected');
     });
 
-
     function getUrlVars() {
         var vars = {};
         var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -50,7 +49,30 @@ $(document).ready(function() {
       $('.header').show();
     }
 
+    $('#url').keypress(function(e) {
+        if(e.keyCode == 13) {
+
+            if ($(this).val().match(/^http/)) {
+                $.noop()
+            }
+            else {
+                // get value from field
+                var cur_val = $(this).val();
+                // do with cur_val
+                $(this).val('http://' + cur_val);
+            }
+        }
+    });
     $("#go").click(function(event){
+        if ($('#url').val().match(/^http/)) {
+            $.noop()
+        }
+        else {
+            // get value from field
+            var cur_val = $('#url').val();
+            // do with cur_val
+            $('#url').val('http://' + cur_val);
+        }
         $('iframe').attr('src', $( '#url' ).val());
         $('.main').hide();
         $('.header').show();
